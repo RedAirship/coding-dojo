@@ -21,4 +21,9 @@ describe('Code kata', () => {
 		expect(answer(15)).toEqual('fizzbuzz');
 		expect(answer(30)).toEqual('fizzbuzz');
   });
+  it('should return input when input is not a valid input', () => {
+		expect(answer('hello')).toEqual('hello');
+		expect(answer('fizzbuzz')).toEqual('fizzbuzz');
+		expect(answer(-11)).toEqual(-11);
+  });
 });
