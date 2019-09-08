@@ -17,4 +17,8 @@ describe('Code kata', () => {
 		expect(answer(5)).toEqual('buzz');
 		expect(answer(10)).toEqual('buzz');
   });
+  it('should return fizzbuzz', () => {
+		expect(answer(15)).toEqual('fizzbuzz');
+		expect(answer(30)).toEqual('fizzbuzz');
+  });
 });

@@ -1,10 +1,14 @@
 const answer = (number) => {
+  let output = '';
+  let isModified = false;
   if (number % 3 == 0) {
-    return 'fizz';
+    isModified = true;
+    output += 'fizz';
   }
   if (number % 5 == 0) {
-    return 'buzz';
+    isModified = true;
+    output += 'buzz';
   }
-	return number;
+	return isModified ? output : number;
 }
 export default answer;
