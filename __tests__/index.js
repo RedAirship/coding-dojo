@@ -26,4 +26,15 @@ describe('Code kata', () => {
 		expect(answer('fizzbuzz')).toEqual('fizzbuzz');
 		expect(answer(-11)).toEqual(-11);
   });
+  // Stage 2
+  it('should return fizz when the number has a 3 in it', () => {
+		expect(answer(13)).toEqual('fizz');
+		expect(answer(23)).toEqual('fizz');
+		expect(answer(33)).toEqual('fizz');
+  });
+  it('should return buzz when the number has a 5 in it', () => {
+		expect(answer(52)).toEqual('buzz');
+		expect(answer(58)).toEqual('buzz');
+		expect(answer(152)).toEqual('buzz');
+  });
 });
