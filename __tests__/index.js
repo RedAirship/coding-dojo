@@ -1,11 +1,11 @@
 import answer from '../index';
 
 describe('Code kata', () => {
-	it('should start writing your own test', () => {
-		const hasStartedUpdatingTest = false;
-		expect(hasStartedUpdatingTest).toEqual(true);
-  });
-  it('should have an answer', () => {
-		expect(() => answer()).not.toThrow(new Error('No solution provided!'));
+  it('should return the number', () => {
+		expect(answer(1)).toEqual(1);
+		expect(answer(2)).toEqual(2);
+		expect(answer(4)).toEqual(4);
+		expect(answer(7)).toEqual(7);
+		expect(answer(8)).toEqual(8);
 	});
 });

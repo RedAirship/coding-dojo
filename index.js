@@ -1,4 +1,4 @@
-const answer = () => {
-	throw 'No solution provided!';
+const answer = (number) => {
+	return number;
 }
 export default answer;
