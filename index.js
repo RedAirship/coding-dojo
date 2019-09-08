@@ -1,15 +1,15 @@
-const answer = (number) => {
+const answer = (number, customRules = {3: 'fizz', 5: 'buzz'}) => {
   let output = '';
   let isModified = false;
   const stringNumber = number.toString(10);
-  if (number % 3 == 0 || stringNumber.includes('3')) {
-    isModified = true;
-    output += 'fizz';
-  }
-  if (number % 5 == 0 || stringNumber.includes('5')) {
-    isModified = true;
-    output += 'buzz';
-  }
+
+  for (let [key, word] of Object.entries(customRules)) {
+    if (number % key == 0 || stringNumber.includes(`${key}`)) {
+      isModified = true;
+      output += word;
+    }
+  };
+
 	return isModified ? output : number;
 }
 export default answer;

@@ -37,4 +37,15 @@ describe('Code kata', () => {
 		expect(answer(58)).toEqual('buzz');
 		expect(answer(152)).toEqual('buzz');
   });
+  // Stage 3
+  it('should accept custom rules', () => {
+    const customRules = {
+      7: 'foo',
+      9: 'bar',
+    };
+		expect(answer(2, customRules)).toEqual(2);
+		expect(answer(7, customRules)).toEqual('foo');
+		expect(answer(9, customRules)).toEqual('bar');
+		expect(answer(63, customRules)).toEqual('foobar');
+  });
 });
